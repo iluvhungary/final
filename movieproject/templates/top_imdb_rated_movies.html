@@ -1,0 +1,11 @@
+<!-- top_imdb_rated_movies.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Top IMDb Rated Movies</h1>
+  <ul>
+    {% for movie in top_movies %}
+      <li>{{ movie.title }} - {{ movie.imdb_rating }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
